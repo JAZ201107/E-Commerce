@@ -1,5 +1,10 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
-export default function Home() {
-  return <div className="underline"> Hello World</div>;
+export default function SetupPage() {
+  return (
+    <div className="underline">
+      <UserButton afterSignOutUrl="/" />
+    </div>
+  );
 }
