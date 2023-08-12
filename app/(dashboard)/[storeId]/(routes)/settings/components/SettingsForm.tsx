@@ -24,6 +24,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "react-hot-toast";
 import AlertModal from "@/components/modals/AlertModal";
 import { ApiAlert } from "@/components/ui/api-alert";
+import { useOrigin } from "@/hooks/useOrigin";
 
 interface SettingsFormProps {
   initialData: Store;
@@ -38,6 +39,7 @@ type SettingsFormValues = z.infer<typeof formSchema>;
 const SettingsForm: FC<SettingsFormProps> = ({ initialData }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const origin = useOrigin();
 
   const params = useParams();
   const router = useRouter();
