@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { format } from "date-fns";
 import BillboardClient from "./components/BillboardClient";
 import prismadb from "@/lib/prismadb";
-import { BillboardColumn } from "./components/columns";
+import { BillboardColumn } from "./components/Columns";
 
 interface BillboardProps {}
 
